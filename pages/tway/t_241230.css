@@ -63,7 +63,7 @@
     }
 
     .section1 {
-        background: url(./241230/bg-pc.png) repeat-y;
+        background: url(./241230/bg-pc.webp) repeat-y;
         width: 100%;
     }
 
@@ -77,7 +77,7 @@
     .section1 .inner .line {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         width: 100%;
         border-bottom: 1px solid rgb(0 0 0 / 10%);
         padding: 7rem 0;
@@ -87,27 +87,31 @@
         border-bottom: 0;
     }
 
-    .item {
-        display: flex;
+    /* .item {
+        display: flex;  
         flex-direction: column;
-    }
-    .item .title span {
-        font-size: 3rem;
-        font-weight: 600;
-        padding: 0 0.05rem;
+    } */
+    .item .title p {
         position: relative;
-        display: inline-block;
+        width: 4rem;
+        height: 3rem;
+        box-sizing: border-box;
+        overflow: hidden;
         margin-bottom: 1rem;
+        text-align: center;
     }
-    .item .title span::after {
+    .item .title p::after {
         position: absolute;
         left: 0;
-        bottom: 1rem;
+        bottom: 0;
         height: 2px;
         width: 100%;
         background: #1c1c1c;
-        content: '';
-        
+        content: ''; 
+    }
+    .item .title span {
+        font-size: 3rem;
+        font-weight: 700;
     }
 
     .item h2 {
@@ -152,6 +156,7 @@
         width: 0.25rem;
         height: 0.25rem;
         content: '';
+        border-radius: 9rem;
     }
     .item .info dl dt::after {
         position: absolute;
@@ -172,21 +177,21 @@
     }
 
     .section1 .inner .cp-box .bg1 {
-        background: url(./241230/cp1-pc.png) no-repeat center;
+        background: url(./241230/cp1-pc.webp) no-repeat center;
         background-size: contain;
         width: 38rem;
         height: 18rem;
     }
 
     .section1 .inner .cp-box .bg2 {
-        background: url(./241230/cp2-pc.png) no-repeat center;
+        background: url(./241230/cp2-pc.webp) no-repeat center;
         background-size: contain;
         width: 38rem;
         height: 18rem;
     }
 
     .section1 .inner .cp-box .bg3 {
-        background: url(./241230/cp3-pc.png) no-repeat center;
+        background: url(./241230/cp3-pc.webp) no-repeat center;
         background-size: contain;
         width: 38rem;
         height: 18rem;
@@ -238,6 +243,7 @@
         display: inline-flex;
         padding: 0.5rem 1.6rem;
         margin-right: 1rem;
+        border-radius: 0.4rem;
     }
 
     .section2 .btn span {
@@ -249,19 +255,6 @@
         background: url(./241230/hotel.svg) no-repeat center right;
         background-size: 2rem;
     }
-    /* .section2 .title h3 {
-        font-size: 3rem;
-        font-weight: 500;
-        margin-bottom: 1.6rem;
-    }
-
-    .section2 .title p {
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    } */
 
     .step {
         width: 80%;
@@ -289,12 +282,13 @@
         background-color: #313131;
         color: #fff;
         border-radius: 2.5rem;
-        padding: 0.2rem 1rem;
+        padding: 0.2rem 0.8rem;
+        line-height: 100%;
     }
 
     .step li p {
         font-size: 1.8rem;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 2.4rem;
         text-align: left;
         height: 4.8rem;
@@ -317,27 +311,178 @@
         background: rgb(0 0 0 / 40%);
         border-radius: 50%;
         padding: 2vw;
-        width: 40px !important;
-        height: 40px !important;
+        width: 10vw !important;
+        height: 10vw !important;
+        max-width: 34px !important;
+        max-height: 34px !important;
         color: #fff;
     }
 
     .swiper-button-prev svg,
     .swiper-button-next svg {
         color: #fff;
-        width: 24px !important;
-        height: 24px !important;
+        width: 28px !important;
+        height: 28px !important;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        top: 60% !important;
     }
 
 
     @media screen and (max-width: 1024px) {
-        .item h2 {
-            font-size: 4.5vw;
+        .section1 .inner {
+            width: 79vw;
         }
+        .section1 .inner .line {
+            padding: 8vw 0;
+        }
+        .item h2 {
+            font-size: 4vw;
+            margin-bottom: 2vw;
+        }
+        .item .title p {
+            width: 4.5vw;
+            height: 3.4vw;
+        }
+        .item .title span {
+            font-size: 3.5vw;
+        }
+        .item .title span::after {
+            bottom: 2vw
+        }   
+        
+        .item .info {
+            gap: 0;
+        }
+        .item .info dl {
+            gap: 1vw;
+        }
+        .item .info dl dt, .item .info dl dd {
+            font-size: 2vw;
+        }
+        .item .info dl dt {
+            padding: 0 1.6vw 0 1.4vw;
+        }
+        .item .info dl dt::before {
+            width: 0.5vw;
+            height: 0.5vw;
+        }
+        .section1 .inner .cp-box {
+            width: 36vw;
+            height: auto;
+        }
+        .section1 .inner .cp-box .bg1 {
+            background-size: 100% 100%;
+            aspect-ratio: 380 / 180;
+            width: 100%;
+            height: auto;
+        }
+        .section1 .inner .cp-box .bg2 {
+            background-size: 100% 100%;
+            aspect-ratio: 380 / 180;
+            width: 100%;
+            height: auto;
+        }
+        .section1 .inner .cp-box .bg3 {
+            background-size: 100% 100%;
+            aspect-ratio: 380 / 180;
+            width: 100%;
+            height: auto;
+        }
+        .section1 .inner .cp-box .txt {
+            display: block;
+            font-size: 2vw;
+            line-height: 1.2;
+            padding-top: 2vw;
+        }
+        .section1 .inner .cp-box .btn {
+            height: 6vw;
+        }
+        .section1 .inner .cp-box .btn span {
+            font-size: 2vw;
+            padding: 0 3.5vw 0 0;
+            background-size: 2.6vw;
+            line-height: 6vw;
+        }
+        .section2 {
+            padding: 8vw 0 0 0;
+        }
+        .section2 h3 {
+            font-size: 3vw;
+            margin-bottom: 2.4vw;
+        }
+        .section2 .stxt {
+            font-size: 1.8vw;
+        }
+        .section2 .btn {
+            padding: 0.5vw 1.2vw;
+            margin-right: 1vw;
+        }
+
+        .section2 .btn span {
+            font-size: 1.6vw;
+            padding: 0 2.4vw 0 0;
+            background-size: 2vw;
+        }
+
+        .step {
+            width: 80vw;
+            margin: 6vw auto 0;
+        }
+
+        .step li {
+            gap: 1.2vw;
+        }
+
+        .step li div {
+            gap: 1vw;
+        }
+        .step li p {
+            font-size: 1.8vw;
+            line-height: 2.4vw;
+            height: 4.8vw;
+        }
+        
     }
 
+    @media (max-width:820px) {
+        .section2 h3 {
+            font-size: 3.5vw;
+        }
+        .step {
+            width: 90%;
+            margin: 6vw auto 0;
+        }
+        .section2 .stxt {
+            font-size: 2.5vw;
+        }
+        .section2 .btn {
+            margin-right: 1vw;
+            padding: 0.5vw 1.2vw;
+        }
+        .section2 .btn span {
+            font-size: 2vw;
+            background-size : 2.5vw;
+            padding-right: 3.5vw;
+        }
+        .step li {
+            gap: 2vw;
+        }
 
-    @media screen and (max-width: 640px) {
+        .step li div {
+            gap: 1vw;
+        }
+
+        .step li p {
+            font-size: 2.2vw;
+            line-height: 2.4vw;
+            height: 5vw;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .section1 .inner {
+            width: 84vw;
+        }
         .section1 .inner .line {
             flex-direction: column;
             align-items: center;
@@ -346,21 +491,32 @@
             padding: 12vw 0 14vw;
             border-bottom: 1px solid rgba(0, 0, 0, 0.158);
         }
-        .item .title {
+        .item .title  {
             text-align: center;
+        }
+        .item .title p {
+            width: 9vw;
+            height: 6.4vw;
+            margin: 0 auto 2vw;
         }
         .item .title span {
             font-size: 6.5vw;
         }
         .item .title span::after {
             bottom: 2vw
-        }
+        }   
         .item h2 {
-            font-size: 7.35vw;
+            font-size: 6.5vw;
             margin-bottom: 4vw;
         }
+        .item .info {
+            gap: 0;
+        }
+        .item .info dl {
+            gap: 2vw;
+        }
         .item .info dl dt, .item .info dl dd {
-            font-size: 4.6vw;
+            font-size: 4vw;
         }
         .item .info dl dt {
             padding: 0 3vw 0 2vw;
@@ -368,49 +524,55 @@
         .item .info dl dt::before {
             width: 1vw;
             height: 1vw;
-            border-radius: 99px;
         }
         .section1 .inner .cp-box {
-            width: 62.5vw;
+            width: 65vw;
             height: auto;
         }
         .section1 .inner .cp-box .bg1 {
-            background: url(./241230/cp1-mo.png) no-repeat center;
+            background: url(./241230/cp1-mo.webp) no-repeat center;
             background-size: 100% 100%;
             aspect-ratio: 400 / 200;
             width: 100%;
+            height: auto;
         }
         .section1 .inner .cp-box .bg2 {
-            background: url(./241230/cp2-mo.png) no-repeat center;
+            background: url(./241230/cp2-mo.webp) no-repeat center;
             background-size: 100% 100%;
             aspect-ratio: 400 / 200;
             width: 100%;
+            height: auto;
         }
         .section1 .inner .cp-box .bg3 {
-            background: url(./241230/cp3-mo.png) no-repeat center;
+            background: url(./241230/cp3-mo.webp) no-repeat center;
             background-size: 100% 100%;
             aspect-ratio: 400 / 200;
             width: 100%;
+            height: auto;
         }
         .section1 .inner .cp-box .txt {
             display: block;
             font-size: 3.8vw;
             line-height: 1.2;
-            padding-top: 4vw;
+            padding-top: 4.2vw;
         }
         .section1 .inner .cp-box .btn {
-            height: 10vw;
+            height: 11vw;
         }
         .section1 .inner .cp-box .btn span {
             font-size: 4vw;
             padding: 0 7vw 0 0;
             background-size: 5vw;
-            line-height: 2.4;
+            line-height: 11vw;
+        }
+        .section2 {
+            padding-top: 13vw;
         }
         .section2 .title h3 {
-            font-size: 6.5vw;
+            font-size: 7vw;
             font-weight: 600;
-            margin-bottom: 5vw;
+            line-height: 1.3;
+            margin-bottom: 6vw;
         }
         .section2 .title .mo {
             display: block;
@@ -420,13 +582,16 @@
         }
         .section2 .title .stxt {
             display: block;
-            font-size: 4.3vw;
+            font-size: 4.5vw;
         }
-        .section2 .title .stxt .btn {
+        .section2 .btn {
             margin-right: 1vw;
+            padding: 0.5vw 1.6vw;
         }
-        .section2 .title .stxt .btn span {
-            font-size: 4.3vw;
+        .section2 .btn span {
+            font-size: 3.5vw;
+            background-size : 4vw;
+            padding-right: 5vw;
         }
         .section2 .title .stxt .mo {
             margin-top: 2vw;
@@ -436,18 +601,20 @@
             margin: 9vw auto 0;
         }
         .step li {
-            gap: 4vw;
+            gap: 5.5vw;
         }
         .step li div {
             align-items: center;
         }
         .step li div p {
-            font-size: 4.5vw;
+            font-size: 5vw;
             line-height: 1.4;
             height: auto;
         }
         .step li div .num {
-            font-size: 4vw;
+            font-size: 4.6vw;
+            padding: 0.5vw 2vw;
+            line-height: 100%;
         }
         .swiper-button-prev, 
         .swiper-button-next {
@@ -464,6 +631,6 @@
             width: 100%;
         }
         .step picture {
-            width: 70%;
+            width: 62%;
         }
     }
