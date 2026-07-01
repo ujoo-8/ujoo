@@ -1,0 +1,1342 @@
+/*===============================================================
+0. 공통
+===============================================================*/
+.content-wrapper {
+    gap: 7rem;
+    padding: 5rem 1.6rem 0;
+    background: #FAF9F4;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        gap: 8rem;
+        padding: 5rem 2rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-wrapper {
+        gap: 10rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-wrapper {
+        padding-top: 7rem;
+    }
+
+    .container-fluid {
+        max-width: 120rem;
+    }
+}
+
+/*===============================================================
+1. 메인 비주얼
+===============================================================*/
+/* .hero-section {
+    background: url(./images/bg-main-visual.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow-x: hidden;
+} */
+.main-visual-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 40rem;
+    max-height: 46.6rem;
+    overflow: hidden;
+    background: #FAF9F4;
+}
+
+.main-visual-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.main-header {
+    width: 100%;
+    background: transparent;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    padding-right: 0px !important;
+    /* padding: 3rem 0; */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 100%); */
+    /* backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);     */
+}
+
+.main-header .inner {
+    width: 95vw;
+    max-width: 100vw !important;
+}
+
+.main-header .row {
+    padding: 1.6rem 0.6rem;
+}
+
+.main-header .logo svg {
+    width: 7.6rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.main-header nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5rem;
+    white-space: nowrap;
+}
+
+.main-header nav a {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.8rem;
+
+}
+
+.main-header .head-searchBox {
+    display: none;
+}
+
+
+.main-header.scrolled {
+    background-color: #FAF9F4;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
+}
+
+.main-header.scrolled .row {
+    padding: 1rem 0.6rem;
+}
+
+.main-header.scrolled .logo svg {
+    filter: invert(0%) sepia(11%) saturate(32%) hue-rotate(314deg) brightness(100%) contrast(86%);
+    filter: invert(100%) !important;
+}
+.main-header.scrolled nav a {
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+.main-header.scrolled .i-user {
+    background: url(./images/ico-user-000.svg) no-repeat !important;
+    display: none;
+}
+
+.main-header.scrolled .i-search {
+    background: url(./images/ico-search-000.svg) no-repeat !important;
+    display: block;
+}
+
+.main-header.scrolled .i-menu {
+    background: url(./images/ico-menu-000.svg) no-repeat !important;
+}
+
+
+
+@media (min-width: 768px) {
+    .main-header .row {
+        padding: 1rem 0;
+    }
+
+    .main-header nav {
+        gap: 2rem;
+    }
+
+    .main-header nav a {
+        font-size: 1.6rem;
+    }
+
+    .main-header.scrolled .row {
+        padding: 0;
+    }
+
+    .main-header.scrolled .i-user {
+        display: block;
+    }
+    .main-header.scrolled .head-searchBox {
+        display: block;
+    }
+
+    .head-searchBox .head-searchBox-inner {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--black);
+        border-radius: 2.6rem;
+        padding: 0 1.6rem;
+    }
+
+    .head-searchBox .head-searchBox-inner form {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .head-searchBox .head-searchBox-inner form input {
+        background: transparent;
+        border: 0;
+        color: var(--black);
+    }
+
+    .head-searchBox .head-searchBox-inner svg {
+        filter: invert(0%) sepia(11%) saturate(32%) hue-rotate(314deg) brightness(100%) contrast(86%);
+        filter: invert(100%) !important;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .main-visual-container {
+        max-height: 85rem;
+    }
+    .main-header.scrolled {
+    padding: 1.6rem 0 !important;
+}
+    .main-header .row {
+        padding: 0;
+    }
+
+    .main-header .logo img {
+        width: 8.6rem;
+        height: 3rem;
+    }
+
+    .main-header nav {
+        gap: 5rem;
+    }
+
+    .main-header nav a {
+        font-size: 1.7rem;
+    }
+
+    .main-header .ico {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .main-header .i-user {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-header .row {
+        padding: 1.6rem 0;
+    }
+    .main-header nav a {
+        font-size: 1.8rem;
+    }
+    
+}
+
+
+@media (max-width: 1440px) {
+    .main-header.scrolled nav {
+        display: none !important;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-area {
+    transition: all 0.3s ease;
+    /* 부드럽게 사라지도록 효과 추가 */
+}
+
+/* JS에 의해 hidden 클래스가 붙으면 사라짐 */
+.search-area.hidden {
+    display: none !important;
+}
+
+
+.search-area {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+
+.search-area .search-bar-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 4px;
+    font-size: 1.15rem;
+    height: 6rem;
+}
+
+.search-area .search-bar-box .form-control {
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+}
+
+.search-area .search-bar-box .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: bold;
+}
+.search-area .search-bar-box .form-control::placeholder {
+    color: var(--white);
+    opacity: 1;
+    /* 파이어폭스에서 투명도 기본값 때문에 흐려지는 현상 방지 */
+}
+
+/* Internet Explorer 10-11 */
+.search-area .search-bar-box .form-control:-ms-input-placeholder {
+    color: var(--white) !important;
+}
+
+/* Microsoft Edge (구버전) */
+.search-area .search-bar-box .form-control::-ms-input-placeholder {
+    color: var(--white);
+}
+.search-area .search-bar-box .form-control:focus {
+    background-color: transparent !important;
+    color: var(--white) !important;
+    border: 0;
+    backdrop-filter: 0;
+}
+
+/* 1. X 버튼과 글자(검색어) 사이 간격 주기 + 여백 조절 */
+.search-area .search-bar-box .form-control::-webkit-search-cancel-button {
+  margin-right: 10px; 
+  margin-left: 15px;  
+  cursor: pointer; 
+}
+
+/* X 버튼 컬러 변경하기 */
+.search-area .search-bar-box .form-control::-webkit-search-cancel-button {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg) brightness(103%) contrast(104%);
+}
+
+/*사이드 전체 메뉴--------------------------*/
+.offcanvas {
+    background: #F6F6F2;
+    padding: 1rem;
+}
+
+.offcanvas .area01 {
+    padding: 3rem 1rem 1.6rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.offcanvas .area01 li {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.offcanvas .area01 .btn-fill {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    padding: 1.6rem 0;
+}
+
+.offcanvas .scroll {
+    height: 60vh;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+}
+
+.offcanvas .scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.offcanvas .area02 button {
+    width: 100%;
+    padding: 1.6rem 1rem;
+    font-weight: 600;
+    text-align: left;
+    background: transparent;
+}
+.offcanvas .area02 li .depth-1 {
+    width: 100%;
+    padding: 1.6rem 1rem;
+    font-weight: 600;
+    text-align: left;
+    background: transparent;
+    display: block;
+}
+.offcanvas .area03 .btn-toggle-nav {
+    padding: 1rem 0 !important;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.offcanvas .area03 .btn-toggle-nav li {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+.offcanvas .area03 li a {
+    padding-left: 2rem;
+    color: var(--gray800);
+}
+
+.mb-1 button {
+    font-size: 1.6rem;
+    border: 0;
+    padding: 0 2rem;
+}
+
+
+/* 모바일 검색 페이지 */
+.offcanvas h5 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
+}
+.offcanvas .search-box {
+    border: 1px solid var(--black);
+    border-radius: 99px;
+    padding: 0.6rem 2rem;
+    background: transparent;
+}
+.offcanvas .search-box input.form-control {
+    background: transparent;
+    color: var(--black);
+}
+
+/* 플레이스홀더 글자 색상 흰색 투명으로 세팅 */
+.offcanvas .search-box .form-control::placeholder {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.offcanvas h6 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.list-unstyled li {
+    /* margin: 0 1.2rem 0.8rem 0;
+    border-radius: 99px;
+    background: var(--white);
+    padding: 1rem 1.6rem; */
+
+}
+.list-unstyled li a {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*===============================================================
+2. 항공권 비교
+===============================================================*/
+.flightPriceSwiper {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+}
+
+.flightPriceSwiper .swiper-slide {
+    padding-top: 0.2rem;
+    padding-bottom: 0.3rem;
+    height: 100% !important;
+}
+
+.flightPriceSwiper .swiper-button-next,
+.flightPriceSwiper .swiper-button-prev {
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* 마우스를 올리거나 뗐을 때 부드럽게 스르륵 바뀌도록 애니메이션 추가 */
+}
+
+.flightPriceSwiper:hover .swiper-button-next,
+.flightPriceSwiper:hover .swiper-button-prev {
+    opacity: 1;
+    visibility: visible;
+}
+
+.flightPriceSwiper:hover .swiper-button-prev.swiper-button-disabled,
+.flightPriceSwiper:hover .swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+.airticket-card {
+    padding: 1.4rem 1.6rem;
+    background: var(--white);
+    border-radius: 0.6rem;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.airticket-card a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.airticket-card a .price {
+    margin-top: 1rem !important;
+}
+
+.airbnSwiper {
+    margin-top: 2rem;
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+}
+
+.airbnSwiper .swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+.airbnSwiper .swiper-pagination .swiper-pagination-bullet {
+    width: 1rem !important;
+    height: 1rem !important;
+
+}
+
+.airbnSwiper .swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--black) !important;
+}
+
+
+@media (min-width: 768px) {
+    .flightPriceSwiper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .airbnSwiper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .air .row {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .flight-area {
+        max-width: 85rem;
+    }
+
+    .airbnSwiper {
+        width: 30.6rem;
+        height: 25.6rem;
+        margin-top: 0;
+    }
+
+    .airbnSwiper a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .airbnSwiper a picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .airbnSwiper a picture img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+/*===============================================================
+3. 투어&티켓 BEST 상품
+===============================================================*/
+.tabpanel {
+    display: none;
+}
+.tabpanel.active {
+    display: block;
+}
+.bestItemSwiper {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+}
+
+.bestItemSwiper ol {
+    padding: 0;
+}
+
+.bestItemSwiper .item {
+    width: 18rem !important;
+    flex-shrink: 0 !important;
+}
+.bestItemSwiper .item .thumb {
+    position: relative;
+}
+.bestItemSwiper .item .ranking {
+    position: absolute;
+    left: 1.6rem;
+    bottom: 0;
+    z-index: 33;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 5rem;
+    font-family: 'Pretendard';
+    transform: skewX(-15deg);
+}
+
+.bestItemSwiper .item .info .rating {
+    position: relative;
+    padding-left: 1.6rem;
+}
+.bestItemSwiper .item .info .rating::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    background: url(./images/ioc-star-color.svg) no-repeat center;
+    background-size: contain;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.bestItemSwiper .item .info .price {
+    margin-top: 1rem;
+}
+
+.bestItemSwiper .swiper-button-next,
+.bestItemSwiper .swiper-button-prev {
+    top: 30%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* 마우스를 올리거나 뗐을 때 부드럽게 스르륵 바뀌도록 애니메이션 추가 */
+}
+
+.bestItemSwiper:hover .swiper-button-next,
+.bestItemSwiper:hover .swiper-button-prev {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bestItemSwiper:hover .swiper-button-prev.swiper-button-disabled,
+.bestItemSwiper:hover .swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+
+@media (min-width: 574px) {
+    .bestItemSwiper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+/*===============================================================
+3. 이벤트 배너
+===============================================================*/
+.event .row {
+    background: rgb(255, 252, 255);
+}
+
+.eventSwiper {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+    /* 혹은 width를 지정하지 않거나 100% 계산 */
+}
+
+@media (min-width: 768px) {
+    .eventSwiper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+
+/*===============================================================
+3. 호텔 타임 세일 상품
+===============================================================*/
+.timeSaleSwiper {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+}
+
+.timeSaleSwiper .item {
+    width: 18rem !important;
+    flex-shrink: 0 !important;
+}
+
+.timeSaleSwiper .item .info .desc:last-child {
+    position: relative;
+    margin-left: 15px;
+}
+
+.timeSaleSwiper .item .info .desc:last-child:after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: block;
+    content: '';
+    width: 1px;
+    height: 12px;
+    background: var(--gray400);
+    margin-left: -8px;
+}
+.timeSaleSwiper .item .info .rating {
+    position: relative;
+    padding-left: 1.6rem;
+}
+.timeSaleSwiper .item .info .rating::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    background: url(./images/ioc-star-color.svg) no-repeat center;
+    background-size: contain;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.timeSaleSwiper .item p:nth-child(3) .desc:last-child {
+    margin: 0;
+}
+.timeSaleSwiper .item p:nth-child(3) .desc:last-child::after {
+    display: none;
+}
+.timeSaleSwiper .item .info .price {
+    margin-top: 1rem;
+}
+
+.timeSaleSwiper .swiper-button-next,
+.timeSaleSwiper .swiper-button-prev {
+    top: 34.5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* 마우스를 올리거나 뗐을 때 부드럽게 스르륵 바뀌도록 애니메이션 추가 */
+}
+
+.timeSaleSwiper:hover .swiper-button-next,
+.timeSaleSwiper:hover .swiper-button-prev {
+    opacity: 1;
+    visibility: visible;
+}
+
+.timeSaleSwiper:hover .swiper-button-prev.swiper-button-disabled,
+.timeSaleSwiper:hover .swiper-button-next.swiper-button-disabled {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+@media (min-width: 574px) {
+    .timeSaleSwiper {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeSaleSwiper .item {
+        width: 28.2rem !important;
+    }
+}
+
+
+
+
+/*===============================================================
+4. 여행후기
+===============================================================*/
+.reviews h2 p {
+    margin-top: 1rem;
+    color: var(--gray600);
+}
+
+.splide {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    margin-top: 1.6rem !important;
+    width: auto;
+    padding-bottom: 1rem;
+}
+
+.splide .splide__list {
+    display: flex !important;
+    gap: 0.4rem !important;
+}
+
+.splide .splide__list .splide__slide {
+    /* width: 30.6rem; */
+    padding: .4rem;
+    margin: 0 !important;
+}
+
+.reviewsCard {
+    width: 30.6rem;
+    height: auto;
+    background: var(--white);
+    border-radius: 0.4rem;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
+}
+
+.reviewsCard .thumb {
+    width: 5.8rem;
+    height: 5.8rem;
+    border-radius: 100%;
+}
+
+.reviewsCard .info {
+    margin-left: 2rem;
+}
+
+.reviewsCard .info .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    height: 2rem;
+    margin-bottom: 0 !important;
+}
+
+.reviewsCard .info .star span {
+    background: url(./images/ioc-star-black.svg) no-repeat center;
+    background-size: contain;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+}
+
+.reviewsCard .content {
+    margin-top: 1.6rem;
+    color: var(--gray600);
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.splide__slide:nth-child(odd) .reviewsCard .content {
+    -webkit-line-clamp: 5;
+    height: 10rem;
+}
+
+.splide__slide:nth-child(even) .reviewsCard .content {
+    -webkit-line-clamp: 3;
+    height: 6rem;
+}
+
+.reviewsCard .user {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: right;
+    color: var(--gray700);
+}
+
+@media (min-width: 768px) {
+    .splide {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .splide__slide:nth-child(odd) .reviewsCard .content {
+        height: 10rem;
+    }
+
+    .splide__slide:nth-child(even) .reviewsCard .content {
+        height: 6rem;
+    }
+}
+
+
+/*===============================================================
+5. 숏츠로 보는 추천 상품
+===============================================================*/
+.shorts .tag {
+    gap: 0.6rem 1.6rem;
+    margin-bottom: 2rem !important;
+}
+
+.shorts .tag button {
+    display: block;
+    color: var(--black);
+    opacity: 0.7;
+    font-size: 1.5rem;
+    font-weight: normal;
+    background: transparent;
+}
+
+.shorts .tag button:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.shorts .tag button.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.shortsSwiper {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    width: auto;
+    position: relative;
+}
+
+.shorts-form {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+.shorts-form .video {
+    width: 100%;
+    height: 47.6rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.shorts-form .video:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.shorts-form .video img {
+    width: 100%;
+    height: 100%;
+}
+
+.shorts-form .video .ico-play {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shorts-form .video .ico-play svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.shorts-form .prod-info {
+    background: var(--white);
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    color: var(--black);
+    padding: 1.6rem 1.6rem 1.8rem;
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.shorts-form .prod-info .info {
+    padding: 0;
+    margin-top: 0;
+}
+
+.shorts-form .prod-info .info .name2 {
+    height: 2.5rem;
+    margin-bottom: 0;
+}
+
+.shorts-form .prod-info img {
+    width: 6.5rem;
+    height: 7.5rem;
+    border-radius: 0.6rem !important;
+}
+
+.shorts-form .prod-info .price {
+    margin-top: 0 !important;
+}
+
+
+.shorts-area .swiper-pagination {
+    position: static !important;
+    margin-top: 2rem;
+}
+
+.shorts-area .swiper-pagination .swiper-pagination-bullet {
+    background: var(--black);
+    width: 1rem;
+    height: 1rem;
+}
+
+@media (min-width: 768px) {
+    .shortsSwiper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .shorts .tag {
+        padding: 0;
+        margin-bottom: 3rem !important;
+    }
+
+    .shorts-form {
+        width: 38.4rem !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .shorts .tag {
+        padding: 0;
+    }
+
+    .shorts .tag a {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+
+/*===============================================================
+6. 공지사항 & 고객센터
+===============================================================*/
+.cs-noti {
+    margin-bottom: 4rem !important;
+}
+.noti {
+    margin-bottom: 5rem !important;
+}
+
+.noti h2 {
+    margin-bottom: 0;
+}
+
+.noti ul li {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    gap: 1rem;    
+}
+
+.noti ul li:first-child {
+    border-top: 0;
+}
+
+.noti ul li span {
+    color: var(--gray700);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    height: 2rem !important;
+}
+
+.noti ul li time {
+    color: var(--gray700);
+    white-space: nowrap;
+}
+
+.cs .area02 {
+    margin-top: 2rem;
+}
+
+.cs .btn-basic {
+    margin-top: 2rem;
+}
+
+.cs .tel-1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 1rem !important;
+}
+
+.cs .tel-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 0.5rem !important;
+}
+
+.cs .t-small {
+    font-size: 1.4rem;
+    color: var(--gray600);
+    margin-bottom: 0;
+}
+
+.cs p {
+    color: var(--gray600);
+    white-space: nowrap;
+}
+
+
+
+@media (min-width: 768px) {
+    /* .noti {
+        padding-right: 4rem !important;
+    } */
+
+    .noti ul li {
+        padding: 2.6rem 0;
+    }
+
+    .cs {
+        gap: 0;
+    }
+
+    .cs .area01 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .noti ul {
+        padding: 0;
+    }
+
+    .noti ul li {
+        padding: 2.8rem 0;
+    }
+
+    /* .cs {
+        padding-left: 9rem;
+    } */
+
+    .cs .btn-basic {
+        margin-left: 0;
+    }
+
+
+}
+
+
+@media (min-width: 1200px) {
+    /* .cs {
+        padding-left: 13rem;
+    } */
+
+    .cs-noti .cs>div {
+        padding: 0;
+    }
+}
+
+/*===============================================================
+7. footer
+===============================================================*/
+footer {
+    padding-bottom: 2rem;
+    background: #FAF9F4;
+}
+
+footer .inner {
+    max-width: 100% !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.50);
+    padding: 4rem 1.6rem 0;
+}
+
+footer .inner .row {
+    max-width: 120rem !important;
+    margin: 0 auto;
+}
+
+footer .area01 {
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+footer .area01 a {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer .sns-youtube {
+    display: block;
+    background: url(./images/ico-sns-youtube.svg) center center;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.5;
+}
+
+footer .sns-instagram {
+    display: block;
+    background: url(./images/ico-sns-instagram.svg) center center;
+    background-size: contain;
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0.5;
+}
+
+footer .sns-blog {
+    display: block;
+    background: url(./images/ico-sns-blog.svg) center center;
+    background-size: contain;
+    width: 2.7rem;
+    height: 2.7rem;
+    opacity: 0.5;
+}
+
+footer .area02 {
+    width: 100%;
+}
+
+footer .area02 p {
+    font-size: 1.3rem;
+    color: var(--gray600);
+}
+
+footer .area02 p:last-child {
+    margin-top: 2rem;
+}
+
+footer .area02 span {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--gray600);
+    margin-bottom: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    footer .area01 {
+        gap: 0;
+    }
+
+    footer .area02 {
+        padding: 0;
+    }
+
+    footer .area02 p {
+        overflow: hidden;
+    }
+
+    footer .area02 p span {
+        position: relative;
+        display: inline-block;
+        margin-right: 13px;
+    }
+
+    footer .area02 p span:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 1px;
+        height: 12px;
+        background: var(--gray300);
+        margin-left: -8px;
+    }
+
+    footer .area02 p span:first-child:after {
+        display: none;
+    }
+
+    /* @media (min-width: 1024px) {
+        footer .area02 {
+            margin: 0 !important;
+        }
+    } */
+
+
+    @media (min-width: 1200px) {
+        footer .sns-youtube {
+            width: 2.4rem;
+            height: 3rem;
+        }
+
+        footer .sns-instagram {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+
+        footer .sns-blog {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
