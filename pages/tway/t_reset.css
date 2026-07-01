@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root{font-size:62.5%; font-family:"Pretendard";}
 body{padding:0;margin:0;-webkit-text-size-adjust : none}/*폰트 사이즈 고정*/
-ul, ol, li, p {list-style:none; padding: 0; margin: 0;}
+dl, dt, dd, ul, ol, li, p {list-style:none; padding: 0; margin: 0;}
 img, input, textarea, select, button {vertical-align:middle;margin:0;padding:0;color:#313131;font-size:14px;line-height:1.5;font-family:"Pretendard","Arial","Meiryo","Nanum Gothic","Yu Gothic",sans-serif;}
 legend, caption {font-size:0;width:0;height:0;line-height:0;margin:0;padding:0;background:none; text-indent:-9999em;}
 em, address,i {font-style:normal;}
