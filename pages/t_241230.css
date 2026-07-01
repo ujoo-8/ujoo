@@ -1,0 +1,469 @@
+    @import url("./t_reset.css");
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 62.5%;
+    }
+
+    body {
+        margin: 0;
+        color: #313131;
+        font-size: 1.6rem;
+        font-weight: normal;
+        font-family: 'Pretendard';
+        line-height: 1.4;
+    }
+
+    .wrap {
+        max-width: 114rem;
+        margin: 0 auto;
+    }
+
+    .img-f {
+        width: 100%;
+    }
+
+    .blind {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+     }
+
+    .visual-area {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .visual-area .visual {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .visual-area .visual picture {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .visual-area .title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 98;
+    }
+
+    .section1 {
+        background: url(./241230/bg-pc.png) repeat-y;
+        width: 100%;
+    }
+
+    .section1 .inner {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section1 .inner .line {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        border-bottom: 1px solid rgb(0 0 0 / 10%);
+        padding: 7rem 0;
+    }
+
+    .section1 .inner .line:last-child {
+        border-bottom: 0;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+    .item .title span {
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 0 0.05rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    .item .title span::after {
+        position: absolute;
+        left: 0;
+        bottom: 1rem;
+        height: 2px;
+        width: 100%;
+        background: #1c1c1c;
+        content: '';
+        
+    }
+
+    .item h2 {
+        font-size: 4.6rem;
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02rem;
+        margin-bottom: 2rem;
+    }
+
+    .item h2 strong {
+        color: #fe4651;
+        font-weight: 800;
+    }
+
+    .item .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .item .info dl {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem
+    }
+
+    .item .info dl dt {
+        font-size: 1.8rem;
+        font-weight: 600;
+        position: relative;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .item .info dl dt::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: rgb(0 0 0 / 80%);
+        width: 0.25rem;
+        height: 0.25rem;
+        content: '';
+    }
+    .item .info dl dt::after {
+        position: absolute;
+        right: 0;
+        content: ':';
+    }
+
+    .item .info dl dd {
+        font-size: 1.8rem;
+        margin-left: 0;
+    }
+
+    .section1 .inner .cp-box {
+        width: 38rem;
+        height: 24.5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .section1 .inner .cp-box .bg1 {
+        background: url(./241230/cp1-pc.png) no-repeat center;
+        background-size: contain;
+        width: 38rem;
+        height: 18rem;
+    }
+
+    .section1 .inner .cp-box .bg2 {
+        background: url(./241230/cp2-pc.png) no-repeat center;
+        background-size: contain;
+        width: 38rem;
+        height: 18rem;
+    }
+
+    .section1 .inner .cp-box .bg3 {
+        background: url(./241230/cp3-pc.png) no-repeat center;
+        background-size: contain;
+        width: 38rem;
+        height: 18rem;
+    }
+
+    .section1 .inner .cp-box .txt {
+        font-size: 1.8rem;
+        display: block;
+        padding-top: 2rem;
+    }
+
+    .section1 .inner .cp-box .btn {
+        display: block;
+        width: 100%;
+        height: 6.5rem;
+        background: #000;
+        line-height: 100%;
+    }
+
+    .section1 .inner .cp-box .btn span {
+        display: inline-block;
+        height: 100%;
+        line-height: 6.5rem;
+        font-size: 2.2rem;
+        color: #fff;
+        padding: 0 3.5rem 0 0;
+        background: url(./241230/hotel.svg) no-repeat center right;
+        background-size: 2rem;
+    }
+
+    .section2 {
+        background-color: #efece9;
+        text-align: center;
+        padding: 8rem 0 0 0;
+    }
+    .section2 h3 {
+        font-size: 3rem;
+        margin-bottom: 2.4rem;
+    }
+    .section2 .stxt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+    .section2 .btn {
+        background: #000;
+        display: inline-flex;
+        padding: 0.5rem 1.6rem;
+        margin-right: 1rem;
+    }
+
+    .section2 .btn span {
+        display: inline-block;
+        height: 100%;
+        font-size: 1.6rem;
+        color: #fff;
+        padding: 0 3rem 0 0;
+        background: url(./241230/hotel.svg) no-repeat center right;
+        background-size: 2rem;
+    }
+    /* .section2 .title h3 {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+    }
+
+    .section2 .title p {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    } */
+
+    .step {
+        width: 80%;
+        margin: 7rem auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .step li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .step li div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: 0 auto;
+    }
+    .step li .num {
+        background-color: #313131;
+        color: #fff;
+        border-radius: 2.5rem;
+        padding: 0.2rem 1rem;
+    }
+
+    .step li p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+        text-align: left;
+        height: 4.8rem;
+    }
+
+    .step picture {
+        margin: 0 auto;
+    }
+
+    .swiper-button-prev {
+        margin-left: 20px !important;
+    }
+
+    .swiper-button-next {
+        margin-right: 20px !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: rgb(0 0 0 / 40%);
+        border-radius: 50%;
+        padding: 2vw;
+        width: 40px !important;
+        height: 40px !important;
+        color: #fff;
+    }
+
+    .swiper-button-prev svg,
+    .swiper-button-next svg {
+        color: #fff;
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+
+    @media screen and (max-width: 1024px) {
+        .item h2 {
+            font-size: 4.5vw;
+        }
+    }
+
+
+    @media screen and (max-width: 640px) {
+        .section1 .inner .line {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7vw;
+            padding: 12vw 0 14vw;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+        }
+        .item .title {
+            text-align: center;
+        }
+        .item .title span {
+            font-size: 6.5vw;
+        }
+        .item .title span::after {
+            bottom: 2vw
+        }
+        .item h2 {
+            font-size: 7.35vw;
+            margin-bottom: 4vw;
+        }
+        .item .info dl dt, .item .info dl dd {
+            font-size: 4.6vw;
+        }
+        .item .info dl dt {
+            padding: 0 3vw 0 2vw;
+        }
+        .item .info dl dt::before {
+            width: 1vw;
+            height: 1vw;
+            border-radius: 99px;
+        }
+        .section1 .inner .cp-box {
+            width: 62.5vw;
+            height: auto;
+        }
+        .section1 .inner .cp-box .bg1 {
+            background: url(./241230/cp1-mo.png) no-repeat center;
+            background-size: 100% 100%;
+            aspect-ratio: 400 / 200;
+            width: 100%;
+        }
+        .section1 .inner .cp-box .bg2 {
+            background: url(./241230/cp2-mo.png) no-repeat center;
+            background-size: 100% 100%;
+            aspect-ratio: 400 / 200;
+            width: 100%;
+        }
+        .section1 .inner .cp-box .bg3 {
+            background: url(./241230/cp3-mo.png) no-repeat center;
+            background-size: 100% 100%;
+            aspect-ratio: 400 / 200;
+            width: 100%;
+        }
+        .section1 .inner .cp-box .txt {
+            display: block;
+            font-size: 3.8vw;
+            line-height: 1.2;
+            padding-top: 4vw;
+        }
+        .section1 .inner .cp-box .btn {
+            height: 10vw;
+        }
+        .section1 .inner .cp-box .btn span {
+            font-size: 4vw;
+            padding: 0 7vw 0 0;
+            background-size: 5vw;
+            line-height: 2.4;
+        }
+        .section2 .title h3 {
+            font-size: 6.5vw;
+            font-weight: 600;
+            margin-bottom: 5vw;
+        }
+        .section2 .title .mo {
+            display: block;
+        }
+        .section2 .title p {
+            font-size: 3.5vw;
+        }
+        .section2 .title .stxt {
+            display: block;
+            font-size: 4.3vw;
+        }
+        .section2 .title .stxt .btn {
+            margin-right: 1vw;
+        }
+        .section2 .title .stxt .btn span {
+            font-size: 4.3vw;
+        }
+        .section2 .title .stxt .mo {
+            margin-top: 2vw;
+        }
+        .step {
+            width: 94%;
+            margin: 9vw auto 0;
+        }
+        .step li {
+            gap: 4vw;
+        }
+        .step li div {
+            align-items: center;
+        }
+        .step li div p {
+            font-size: 4.5vw;
+            line-height: 1.4;
+            height: auto;
+        }
+        .step li div .num {
+            font-size: 4vw;
+        }
+        .swiper-button-prev, 
+        .swiper-button-next {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+        
+    }
+
+
+
+    @media screen and (max-width: 480px) {
+        .section1 .inner {
+            width: 100%;
+        }
+        .step picture {
+            width: 70%;
+        }
+    }

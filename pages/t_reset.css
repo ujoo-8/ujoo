@@ -1,0 +1,107 @@
+@charset "UTF-8";
+:root{font-size:62.5%; font-family:"Pretendard";}
+body{padding:0;margin:0;-webkit-text-size-adjust : none}/*폰트 사이즈 고정*/
+ul, ol, li, p {list-style:none; padding: 0; margin: 0;}
+img, input, textarea, select, button {vertical-align:middle;margin:0;padding:0;color:#313131;font-size:14px;line-height:1.5;font-family:"Pretendard","Arial","Meiryo","Nanum Gothic","Yu Gothic",sans-serif;}
+legend, caption {font-size:0;width:0;height:0;line-height:0;margin:0;padding:0;background:none; text-indent:-9999em;}
+em, address,i {font-style:normal;}
+table {border-collapse:collapse;border-spacing:0;border:0;width:100%;} 
+table, td, th {font-size:14px;}
+th {text-align:center;}
+a{color:#313131;text-decoration:none;cursor:pointer;}
+a:hover {text-decoration:none !important;}
+a.disable, a.off, a.disable span{color:#4d4d4d !important;cursor:default !important;}
+h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0;}
+ins {display:inline-block;vertical-align:middle;margin:0;text-decoration:none;font-weight:normal;font-style:normal;}
+hr {margin:50px 0;border-bottom:1px solid #ccc;border-top:0;border-left:0;border-right:0;}
+
+/* FORM */
+button {border:0;vertical-align:middle;background-color:#fff;cursor:pointer;}
+
+
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
