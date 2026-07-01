@@ -121,7 +121,7 @@ header .inner .btn-area {
   background-color: var(--white);
   border-radius: 99px;
   padding: 0.3rem 0.6rem;
-  /* border: 2px solid #e7e0d4; */
+ width: 100%;
 }
 
 .tab-btn {
