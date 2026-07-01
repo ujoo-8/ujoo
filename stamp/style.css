@@ -1,0 +1,487 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+html {
+    font-size: 62.5%;
+}
+body, section, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, strong {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Pretendard', 'NanumSquareRound', '맑은 고딕', 'Malgun Gothic', verdana, Dotum, Gulim, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #1c1c1c;
+}
+ul, li {
+	list-style: none;
+	padding: 0px;
+}
+img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+a {
+	text-decoration: none;
+    border: 0;
+}
+strong {
+    color: #9d240d;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+picture img {
+    width: auto; 
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.offscreen {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px 1px);
+}
+.br {
+	display: inline-block;
+	width: 100%;
+}
+.mo-br {
+    display: none;
+}
+#wrap {
+    max-width: 79rem;
+    margin: 0 auto;
+    background-color: #bfe2f6;
+}
+.area01 {
+    height: 55.2rem;
+}
+.area02 {
+    background: url(./images/bg-info.webp) no-repeat center;
+    background-size: 100% auto;
+    padding: 1.6rem 0 4rem;
+}
+.area02 .stitle {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: 'NanumSquareRound';
+    text-align: center;
+}
+.area02 picture img {
+    display: block;
+    margin: 0 auto;
+}
+.area02 .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.info {
+    width: 53rem;
+    margin: 0 auto;
+    background: url(./images/stamp.webp) no-repeat right top;
+    background-size: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.info dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.4rem;
+} 
+.info dl dt {
+    position: relative;
+    padding-right: 1.6rem;
+	font-size: 2rem;
+	font-weight: 600;
+    white-space: nowrap;
+}
+.info dl dt::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    width: 1px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-left: 1.6rem;
+}
+.info dl dd {
+	font-size: 2rem;
+}
+.info dl dd.mobile {
+    display: none;
+}
+.info dl dd.pc {
+    font-size: 1.8rem;
+}
+.st {
+    font-size: 1.5rem;
+    color:#136b95;
+    letter-spacing: -0.1px;
+}
+.step {
+	width: 54rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.step li {
+	display: grid;
+    align-content: center;
+    justify-content: flex-start;
+    border: 1px dotted #4e7284;
+    padding: 1rem 1.4rem;
+    grid-template-columns: 9rem 1fr;
+}
+.step li .sti {
+	font-size: 1.6rem;
+	font-weight: 600;
+    color: #113342;
+    position: relative;
+    padding-right: 2rem;
+}
+.step li .sti::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    margin-right: 1.6rem;
+}
+.step li span {
+    color: #113342;
+	font-size: 1.6rem;
+}
+.step li span b {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.prize {
+    width: 66.6rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.prize ul {
+    display: flex;
+}
+.prize ul li {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.prize ul li span {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.prize ul li span:first-child {
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: #092839;
+    margin-bottom: 0.6rem;
+}
+.prize ul li span:last-child {
+    font-size: 1.3rem;
+    color: #617783;
+}
+.cc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-top: 3rem;
+	font-size: 1.5rem;
+	color: #4d5d61;
+}
+
+.area03 {
+    width: 100%;
+    background: url(./images/bg-hint.webp) no-repeat center;
+    background-size: 100% 100%;
+    aspect-ratio: 790 / 699;
+    max-height: 68rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.area03 .cont {
+    width: 54rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 22% 0 17%;
+}
+.area03 .cont li {
+    text-align: center;
+}
+
+.area03 .cont img {
+    width: auto;
+}
+.area03 .cont .hint {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.4;
+}
+.area03 .btn {
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1024px) {
+    .area02 {
+        padding: 2rem 0 3rem;
+    }
+    .cc {
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 930px) {
+    .area02 {
+        padding: 0 0 3rem;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    body, section, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, strong  {
+        line-height: 100%;
+    }
+    picture img {
+        width: 100%; 
+        height: auto;
+    }
+    .mo-br {
+        display: inline-block;
+        width: 100%;
+    }
+    strong {
+        font-size: 4vw;
+    }
+    .area01 {
+        height: auto;
+    }
+    .area02 {
+        width: 100%;
+        background: url(./images/bg-info-mo.webp) no-repeat center;
+        background-size: 100% auto;
+        aspect-ratio: 790 / 1300;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .area02 .stitle {
+        font-size: 5vw;
+        line-height: 1.3;
+    }
+    .area02 .cont {
+        gap: 6vw;
+    }
+    .info {
+        width:84vw;
+        background-size: 26%;
+        gap: 2vw;
+    }
+    .info dl {
+        gap: 0;
+    }
+    .info dl dt {
+        font-size: 4vw;
+        padding-right: 6vw;
+    }
+    .info dl dt:after {
+        margin-right: 3vw;
+    }
+    .info dl dd {
+        font-size: 4vw;
+    }
+    .info dl dd.mobile {
+        display: block;
+        font-size: 4vw;
+        line-height: 1.3;
+    }
+    .info dl dd.pc {
+        display: none;
+        
+    }
+    .info dl dd .st {
+        font-size: 3.4vw;
+        margin-top: 1vw;
+    }
+    .step {
+        width: 84vw;
+    }
+    .step li {
+        display: grid;
+        padding: 2vw;
+        grid-template-columns: 22% 1fr;
+    }
+    .step li span {
+        gap: 0;
+    }
+    .step li span:first-child {
+        font-size: 3.5vw;
+        padding-right: 3vw;
+    }
+    .step li span:first-child:after {
+        margin-right:2vw;
+    }
+    .step li span:last-child {
+        width: 62vw;
+        font-size: 3.5vw;
+        line-height: 1.3;
+    }
+    .step li span b {
+        font-size: 3.5vw;
+    }
+    .prize {
+        width: 95%;
+        gap: 1rem;
+    }
+    .prize img {
+        width: 100%;
+    }
+    .prize ul li span:first-child {
+        font-size: 3.4vw;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 8vw;
+        margin: 0 auto;
+        line-height: 1.3;
+    }
+    .prize ul li span:last-child {
+        font-size: 3vw;
+        margin-top: 2vw;
+        line-height: 1.3;
+    }
+    .cc {
+        width: 100%;
+        margin: 4vw auto 0;
+    }
+    .cc img {
+        width: 20%;
+    }
+    .cc .stxt {
+        font-size: 3vw;
+    }
+    .area03 {
+        width: 100%;
+        background: url(./images/bg-hint-mo.webp) no-repeat;
+        background-size: 100% 100%;
+        aspect-ratio: 790 / 793;
+        /* height: auto; */
+        gap: 2vw;
+    }
+    .area03 .cont {
+        padding: 0;
+        width: 100%;
+        height: 70vw;
+        gap: 3vw;
+    }
+    .area03 .cont li:first-child {
+        width: 40%;
+        margin-top: 24vw;
+    }
+    .area03 .cont img {
+        width: 100%;
+    }
+    .area03 .cont .hint {
+        font-size: 3.3vw;
+        color: #ffff;
+        line-height: 1.4;
+    }
+    .area03 .btn {
+        display: block;
+        width: 84%;
+        margin: 0 auto;
+    }
+}
+
+
