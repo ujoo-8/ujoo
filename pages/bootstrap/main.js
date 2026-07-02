@@ -271,7 +271,7 @@ window.addEventListener("scroll", () => {
 const video = document.getElementById('main-video');
 
 // 재생 속도를 설정합니다 (기본값은 1.0)
-video.playbackRate = 0.8;
+//video.playbackRate = 0.8;
 
 
 
