@@ -73,8 +73,8 @@
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.listSwiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
+        slidesPerView: 1.2,
+        spaceBetween: 10,
         slidesOffsetBefore: 16, 
         slidesOffsetAfter: 16, 
         loop: false,
@@ -84,12 +84,18 @@
         },
         breakpoints: {
             768: {
-                slidesPerView: 1.5,
+                slidesPerView: 2.5,
                 spaceBetween: 16, 
                 slidesOffsetBefore: 0,
                 slidesOffsetAfter: 0,
             },
-            1440: {
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 16, 
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            },
+            1441: {
                 slidesPerView: 5,
                 spaceBetween: 16, 
                 slidesOffsetBefore: 0,
