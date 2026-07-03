@@ -473,11 +473,15 @@ sub
 .sub-content-wrapper .mobile {
     max-width: 39.3rem;
 }
+.sub-content-wrapper.travel {
+    max-width: 144rem;
+}
 .sub-content-wrapper.travel .mobile {
     display: none;
 }
 .sub-content-wrapper.travel .pc {
-    max-width: 144rem;
+    /* max-width: 144rem !important; */
+    width: 100%;
 }
 .listSwiper {
     display: flex;
@@ -485,10 +489,12 @@ sub
     /* max-width: 144rem !important; */
     /* margin-left: -1.6rem !important;
     margin-right: -1.6rem !important; */
-    width: auto;
+    /* width: auto; */
 }
 .listSwiper .swiper-wrapper {
     padding: 0;
+    margin: 0;
+    flex-shrink: 0 !important;
 }
 .listSwiper .swiper-slide {
     /* max-width: 27.5rem !important; */
@@ -513,12 +519,18 @@ sub
     .sub-content-wrapper {
         width: 94%;
     }
-    
+    .listSwiper .swiper-wrapper {
+        padding-top: 3rem;
+    }
+    .swiper-pagination {
+        top: 0 !important;
+        height: 2rem;
+        text-align: left !important;
+    }
 }
 
 @media (max-width:1024px) {
     header {
-        width: 92%;
         padding: 4rem 0 3rem;
     }
     header .inner{
@@ -555,13 +567,13 @@ sub
     footer {
         padding: 5rem 0;
     }
-    .copyright {
-        width: 92%;
-    }
     .sub-content-wrapper {
-        width: 92%;
         margin-bottom: 0;
         gap: 3rem;
+    }
+    .listSwiper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
 }
@@ -591,7 +603,12 @@ sub
     .listSwiper {
         margin-left: -1.6rem !important;
         margin-right: -1.6rem !important;
-        /* max-width: 144rem !important; */
+    }
+    .swiper-pagination {
+        top: 0 !important;
+        height: 2rem;
+        text-align: left !important;
+        padding-left: 1.6rem;
     }
 }
 
@@ -607,13 +624,6 @@ sub
     .listSwiper .swiper-slide {
         max-width: 90% !important;
     }
-    .listSwiper .swiper-wrapper {
-        padding-top: 3rem;
-    }
-    .swiper-pagination {
-        top: 0 !important;
-        height: 2rem;
-        text-align: left !important;
-        padding-left: 1.6rem;
-    }
+    
+    
 }
