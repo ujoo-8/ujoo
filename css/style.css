@@ -69,6 +69,7 @@ header .inner li:last-child {
 .work-info dl dt {
     font-weight: 500;
     font-family: "Roboto", sans-serif;
+    white-space: nowrap;
 }
 .work-info dt::after {
     content: ' : ';
