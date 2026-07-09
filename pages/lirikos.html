@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>ujoo's Work</title>
+    <script src="../js/head.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+</head>
+
+
+
+<body>
+    <div id="wrap">
+        <header>
+            <a class="home" href="../index.html">ujoo's work&nbsp;☺</a>
+            <h1>여행 기획전 모음</h1>
+            <div class="inner">
+                <div class="work-info">
+                    <!-- <dl>
+                        <dt>작업기간</dt>
+                        <dd>2026. 6. 11 ~ 19</dd>
+                    </dl> -->
+                    <dl>
+                        <dt>기여도</dt>
+                        <dd>디자인 100%</dd>
+                    </dl>
+                </div>
+                <div class="btn-area">
+                    <!-- <a class="btn-line btn-bounce link" href="./bootstrap/index.html" target="_blank" title="새 창 열림">html페이지 보기</a> -->
+                    <a class="btn-line btn-bounce list" href="../index.html">목록보기</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="sub-content-wrapper travel">
+            <section class="pc">
+                <h2>PC 시안<span style="margin-left: 1rem; font-weight: normal;">이미지를 클릭하면 원본 사이즈 확인이 가능합니다.</span></h2>
+                <div class="swiper listSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>작업시기 : 2015. 09</p>
+                            <a href="https://ujoo-8.github.io/portfolio/images/details/lirikos.webp" target="_blank" title="새 창으로 열림"><img src="../images/details/lirikos.webp" alt="리리코스 어플리케이션 제작"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>작업시기 : 2011. 10</p>
+                            <a href="https://ujoo-8.github.io/portfolio/images/details/lirikos-2.webp" target="_blank" title="새 창으로 열림"><img src="../images/details/lirikos-2.webp" alt="리리코스 사이트 리뉴얼에 따른 상세페이지 제작"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>작업시기 : 2011. 10</p>
+                            <a href="https://ujoo-8.github.io/portfolio/images/details/lirikos-3.webp" target="_blank" title="새 창으로 열림"><img src="../images/details/lirikos-3.webp" alt="리리코스 사이트 리뉴얼에 따른 상세페이지 제작"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>작업시기 : 2011. 10</p>
+                            <a href="https://ujoo-8.github.io/portfolio/images/details/lirikos-4.webp" target="_blank" title="새 창으로 열림"><img src="../images/details/lirikos-4.webp" alt="리리코스 사이트 리뉴얼에 따른 상세페이지 제작"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="mobile"></section>
+        </main>  
+            
+        <div id="footer-include" data-src="../inc/sub_footer.html"></div>
+    </div>
+
+
+<script src="../js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.listSwiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        slidesOffsetBefore: 16, 
+        slidesOffsetAfter: 16, 
+        loop: false,
+        freeMode: {
+            enabled: true,
+            sticky: true, // ◀ freeMode를 쓰되, 멈출 때는 근처 슬라이드에 딱 붙게 해주는 옵션
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2.5,
+                spaceBetween: 16, 
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 16, 
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            },
+            1441: {
+                slidesPerView: 5,
+                spaceBetween: 16, 
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
+            },
+        },
+        // slidesPerView: 5,
+        // spaceBetween: 16,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        });
+</script>
+</body>
+</html>
