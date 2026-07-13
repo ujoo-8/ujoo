@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wander - 여행을 떠나보세요</title>
+    <title>Go! trip - 여행을 떠나보세요</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -14,68 +14,123 @@
 </head>
 
 <body>
-    <header class="fixed-top d-flex justify-content-between align-items-center py-md-3 main-header">
-        <div class="container inner">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                    <a href="#" class="d-flex justify-content-center align-items-center logo">
-                        <svg width="86" height="18" viewBox="0 0 86 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path
-                                d="M4.85156 16.9688L0 0H3.84375L6.70312 11.8594H6.84375L9.96094 0H13.2656L16.3828 11.8828H16.5234L19.3828 0H23.2266L18.375 16.9688H14.9297L11.6953 5.76562H11.5547L8.29688 16.9688H4.85156ZM22.5122 13.4062C22.5239 10.5703 24.7973 9.64453 27.2466 9.49219C28.1606 9.43359 29.8716 9.35156 30.4106 9.32812V8.29688C30.3989 7.23047 29.6723 6.62109 28.3716 6.60938C27.188 6.62109 26.4497 7.14844 26.2622 8.01562H22.9575C23.1684 5.8125 25.0903 4.07812 28.4653 4.07812C31.2427 4.07812 33.8677 5.32031 33.8559 8.39062V16.9688H30.5747V15.2109H30.4809C29.8598 16.3828 28.6411 17.2148 26.7544 17.2031C24.3169 17.2148 22.5239 15.9258 22.5122 13.4062ZM25.8403 13.3125C25.8403 14.2852 26.6255 14.8008 27.7388 14.8125C29.3208 14.8008 30.4223 13.7695 30.4106 12.4219V11.4961C29.8833 11.5195 28.395 11.6016 27.8091 11.6484C26.602 11.7539 25.8403 12.3281 25.8403 13.3125ZM39.4931 9.60938V16.9688H36.0244V4.24219H39.3291V6.46875H39.4697C40.0439 5.00391 41.4033 4.07812 43.29 4.07812C45.9502 4.07812 47.6845 5.89453 47.6728 8.85938V16.9688H44.2275V9.46875C44.2158 7.89844 43.372 6.96094 41.9306 6.96094C40.4892 6.96094 39.4931 7.93359 39.4931 9.60938ZM54.5756 17.1797C51.6694 17.1797 49.3959 14.8711 49.3959 10.6172C49.3959 6.25781 51.7631 4.07812 54.5756 4.07812C56.7084 4.07812 57.728 5.34375 58.185 6.375H58.3022V0H61.7709V16.9688H58.3491V14.9297H58.185C57.7045 15.9844 56.6498 17.1797 54.5756 17.1797ZM52.9584 10.5938C52.9467 12.8438 53.8959 14.4023 55.6538 14.4141C57.3881 14.4023 58.3725 12.8906 58.3725 10.5938C58.3725 8.30859 57.3998 6.84375 55.6538 6.84375C53.8842 6.84375 52.9467 8.37891 52.9584 10.5938ZM69.8456 17.2266C65.9433 17.2148 63.5527 14.6953 63.5644 10.6641C63.5527 6.73828 65.9784 4.07812 69.705 4.07812C73.0448 4.07812 75.6816 6.1875 75.6816 10.5234V11.5078H66.9863C66.9863 13.4297 68.123 14.6133 69.9159 14.625C71.0995 14.6133 71.9433 14.0977 72.2831 13.3359H75.5878C75.0956 15.6914 72.9863 17.2148 69.8456 17.2266ZM66.9863 9.32812H72.4003C72.3886 7.78125 71.3222 6.66797 69.7753 6.67969C68.1816 6.66797 67.0566 7.86328 66.9863 9.32812ZM77.3812 16.9688V4.24219H80.7328V6.44531H80.8734C81.3305 4.88672 82.5141 4.05469 83.9437 4.05469C84.2953 4.05469 84.7406 4.10156 85.0453 4.17188V7.26562C84.7172 7.16016 84.0492 7.07812 83.5687 7.07812C81.9984 7.07812 80.8383 8.16797 80.85 9.72656V16.9688H77.3812Z"
-                                fill="white" />
-                        </svg>
+    <header class="fixed-top d-flex flex-column main-header">
+        <div class="row d-flex flex-row align-items-center justify-content-between area01">
+            <div class="col-11 d-flex flex-row align-items-center justify-content-start col-lg-6 logo-area">
+                <h1>
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./images/logo-test.png">
+                            <img src="./images/logo-test.png" class="img-fluid" alt="">
+                        </picture>
                     </a>
-                    <div class="d-none d-md-flex">
-                        <nav class="d-flex justify-content-between align-items-center">
-                            <a href="#" class="d-block">여행</a>
-                            <a href="#" class="d-block">숙소</a>
-                            <a href="#" class="d-block">에어텔</a>
-                            <a href="#" class="d-block">FIT단독</a>
-                            <a href="#" class="d-block">현지투어티켓</a>
-                            <a href="#" class="d-block">여행정보</a>
-                        </nav>
-                    </div>
-                    <div class="d-flex flex-row gap-4">
-                        <button type="button" class="btn p-0 ico i-search" data-bs-toggle="offcanvas"
-                            data-bs-target="#searchSidebar">
-                            <span class="visually-hidden">검색창 열기</span>
+                </h1>
+                <div class="searchBox">
+                    <form role="search" class="d-flex align-items-center justify-content-between inner" action="">
+                        <input type="search" class="form-control" placeholder="검색어를 입력해주세요" aria-label="Search" />
+                        <button type="button" class="btn-clear"></button>
+                        <button type="submit" class="btn-search d-flex align-items-center justify-content-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L14.95 14.95" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
-                        <button type="button" class="btn p-0 ico i-user">
-                            <span class="visually-hidden">로그인</span>
-                        </button>
-                        <button type="button" class="btn p-0 ico i-menu" data-bs-toggle="offcanvas"
-                            data-bs-target="#responsiveMenu">
-                            <span class="visually-hidden">전체 메뉴</span>
-                        </button>
-                    </div>
-
+                    </form>
                 </div>
             </div>
+            <div class="col-1 d-flex flex-row align-items-center justify-content-end col-lg-5 gap-3">
+                <div class="d-flex flex-row align-items-center justify-content-end gap-3 pc-mn">
+                    <a href="#" class="d-inline-flex align-items-center">
+                        <span class="ico i-event"></span>
+                        <span>이벤트</span>
+                    </a>
+                    <a href="#" class="d-inline-flex align-items-center">
+                        <span class="ico i-cs"></span>
+                        <span>고객센터</span>
+                    </a>
+                    <a href="#" class="d-inline-flex align-items-center">
+                        <span class="ico i-cart"></span>
+                        <span>장바구니</span>
+                    </a>
+                    <a href="#" class="d-inline-flex align-items-center">
+                        <span class="ico i-user"></span>
+                        <span>로그인/회원가입</span>
+                    </a>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-end gap-4">
+                    <button type="button" class="btn p-0 ico i-search" data-bs-toggle="offcanvas" data-bs-target="#searchSidebar">
+                        <span class="visually-hidden">검색창 열기</span>
+                    </button>
+                    <button type="button" class="i-menu" data-bs-toggle="offcanvas" data-bs-target="#responsiveMenu">
+                        <span class="visually-hidden">전체 메뉴</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row area02">
+            <nav class="col-12 d-flex align-items-center justify-content-between justify-content-md-start">
+                <a href="#">항공</a>
+                <a href="#">여행</a>
+                <a href="#">숙소</a>
+                <a href="#">에어텔</a>
+                <a href="#">투어티켓</a>
+                <a href="#">HOT특가</a>
+                <a href="#">단체견적</a>
+            </nav>
         </div>
     </header>
 
-    <section class="main-visual-container d-flex align-items-end">
-        <img src="./images/bg-main-visual-1.webp" alt="">
-        <div class="container mb-5 search-area">
-            <div class="row justify-content-center">
-                <div class="col-11 col-md-8 col-lg-6">
-                    <div class="search-bar-box d-flex justify-content-between align-items-center px-4 py-2">
-                        <form class="d-flex w-100 align-items-center" role="search" action="">
-                            <input type="search" class="form-control" placeholder="어디로 떠나볼까요?" aria-label="Search" />
-                            <button class="btn p-0 border-0" type="submit">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path
-                                        d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M21.0004 21L16.6504 16.65" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </form>
+    <section class="col-12 mainBanner">
+        <div class="row swiper mainBnSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./images/main-banner1-m.webp">
+                            <img src="./images/main-banner1.webp" class="img-fluid" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./images/main-banner2-m.webp">
+                            <img src="./images/main-banner2.webp" class="img-fluid" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./images/main-banner3-m.webp">
+                            <img src="./images/main-banner3.webp" class="img-fluid" alt="">
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="./images/main-banner4-m.webp">
+                            <img src="./images/main-banner4.webp" class="img-fluid" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="pointer-events">
+                <div class="inner">
+                    <div class="swiper-controller">
+                        <button type="button" class="btn-autoplay-toggle">
+                        <!-- 일시정지 -->
+                        <svg class="icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        <!-- 재생 -->
+                        <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="#fff" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -179,22 +234,18 @@
                             <div class="swiper-slide">
                                 <a href="#">
                                     <picture>
-                                        <!-- <source media="(max-width:1024px)" srcset="images/bn-air1-mobile.webp"> -->
-                                        <!-- <source media="(max-width:650px)" srcset="images/bn-air1-mobile.webp"> -->
-                                        <source media="(max-width:650px)" srcset="images/bn-air1-mobile.webp">
-                                        <source media="(max-width:1199px)" srcset="images/bn-air1-tablet.webp">
-                                        <img src="./images/bn-air1.webp" class="img-fluid" alt="항공권 단독 특가 프로모션 배너">
+                                        <source media="(max-width:480px)" srcset="images/bn-air1-mobile.webp">
+                                        <source media="(max-width:1200px)" srcset="images/bn-air1-tablet.webp">
+                                        <img src="./images/bn-air1-pc.webp" class="img-fluid" alt="항공권 단독 특가 프로모션 배너">
                                     </picture>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
                                     <picture>
-                                        <!-- <source media="(max-width:650px)" srcset="images/bn-air2-mobile.webp"> -->
-                                        <!-- <source media="(max-width:1024px)" srcset="images/bn-air2-mobile.webp"> -->
-                                        <source media="(max-width:650px)" srcset="images/bn-air2-mobile.webp">
-                                        <source media="(max-width:1199px)" srcset="images/bn-air2-tablet.webp">
-                                        <img src="./images/bn-air2.webp" class="img-fluid" alt="항공권 단독 특가 프로모션 배너">
+                                        <source media="(max-width:480px)" srcset="images/bn-air2-mobile.webp">
+                                        <source media="(max-width:1200px)" srcset="images/bn-air2-tablet.webp">
+                                        <img src="./images/bn-air2-pc.webp" class="img-fluid" alt="항공권 단독 특가 프로모션 배너">
                                     </picture>
                                 </a>
                             </div>
@@ -479,18 +530,16 @@
                             <div class="swiper-slide">
                                 <a href="#">
                                     <picture>
-                                        <source media="(max-width:650px)" srcset="./images/bn-event1-mobile.webp">
-                                        <source media="(max-width:767px)" srcset="./images/bn-event1-tablet.webp">
-                                        <img src="./images/bn-event1.webp" class="img-fluid" alt="총 $60 썸머쿠폰팩 증정">
+                                        <source media="(max-width:480px)" srcset="./images/banner1-m.webp">
+                                        <img src="./images/banner1.webp" class="img-fluid" alt="">
                                     </picture>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
                                     <picture>
-                                        <source media="(max-width:650px)" srcset="./images/bn-event2-mobile.webp">
-                                        <source media="(max-width:767px)" srcset="./images/bn-event2-tablet.webp">
-                                        <img src="./images/bn-event2.webp" class="img-fluid" alt="총 $60 썸머쿠폰팩 증정">
+                                        <source media="(max-width:480px)" srcset="./images/banner1-m.webp">
+                                        <img src="./images/banner1.webp" class="img-fluid" alt="">
                                     </picture>
                                 </a>
                             </div>
@@ -1169,6 +1218,9 @@
             <div class="scroll">
                 <ul class="list-unstyled area02">
                     <li>
+                        <a class="depth-1" href="#">항공</a>
+                    </li>
+                    <li>
                         <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#package-collapse"
                             aria-expanded="true">
                             여행
@@ -1213,15 +1265,12 @@
                         </div>
                     </li>
                     <li>
-                        <a class="depth-1" href="#"> 에어텔</a>
-                    </li>
-                    <li>
-                        <a class="depth-1" href="#">FIT단독</a>
+                        <a class="depth-1" href="#">에어텔</a>
                     </li>
                     <li>
                         <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#tour-collapse"
                             aria-expanded="false">
-                            현지투어티켓
+                            투어티켓
                         </button>
                         <div class="collapse area03" id="tour-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -1241,26 +1290,10 @@
                         </div>
                     </li>
                     <li>
-                        <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#tinfo-collapse"
-                            aria-expanded="false">
-                            여행정보
-                        </button>
-                        <div class="collapse area03" id="tinfo-collapse">
-                            <ul class="btn-toggle-nav list-unstyled">
-                                <li>
-                                    <a href="#" class=" d-inline-flex ">현지 날씨</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-inline-flex">꼭 챙겨야 할 필수품</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-inline-flex">유명 관광지</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-inline-flex">현지 맛집</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="depth-1" href="#">HOT특가</a>
+                    </li>
+                    <li>
+                        <a class="depth-1" href="#">단체견적</a>
                     </li>
                 </ul>
                 <div class="border-top my-4"></div>

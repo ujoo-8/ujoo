@@ -1,5 +1,53 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    const swiper = new Swiper('.mainBnSwiper', {
+        slidesPerView: 'auto',       
+        centeredSlides: true,        
+        spaceBetween: 10,            
+        loop: true,   
+        loopPreventsSlide: false,
+        rewind: false,
+        loopedSlides: 4,  // 화면 좌우에 대기할 복사본 슬라이드 개수를 3개 이상으로 강제 지정
+
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+            return String(number).padStart(2, '0');
+            },
+            formatFractionTotal: function (number) {
+            return String(number).padStart(2, '0');
+            },
+        },
+        breakpoints: {
+                1024: {
+                    spaceBetween: 16, 
+                },
+            },
+        });
+
+        // 재생 / 일시정지 버튼 제어
+        const toggleBtn = document.querySelector('.btn-autoplay-toggle');
+        const pauseIcon = document.querySelector('.icon-pause');
+        const playIcon = document.querySelector('.icon-play');
+
+        toggleBtn.addEventListener('click', function () {
+        if (swiper.autoplay.running) {
+            swiper.autoplay.stop();
+            pauseIcon.style.display = 'none';
+            playIcon.style.display = 'block';
+        } else {
+            swiper.autoplay.start();
+            pauseIcon.style.display = 'block';
+            playIcon.style.display = 'none';
+        }
+        });
+
+
     // 1-1. 항공권 비교 -------------------------------------------------------------------------
     const flightSwiper = new Swiper('.flightPriceSwiper', {
         slidesPerView: 1.4,
@@ -57,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         breakpoints: {
             768: {
-                slidesPerView: 2, 
+                slidesPerView: 1, 
                 spaceBetween: 10,
                 slidesOffsetBefore: 0, 
                 slidesOffsetAfter: 0, 
@@ -201,13 +249,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         // grabCursor: true,
         breakpoints: {
-            768: {
-                slidesPerView: 2.1,
-                centeredSlides: false, 
-                spaceBetween: 16, 
-                slidesOffsetBefore: 0, 
-                slidesOffsetAfter: 0,
-            },
+            // 768: {
+            //     slidesPerView: 2.1,
+            //     centeredSlides: false, 
+            //     spaceBetween: 16, 
+            //     slidesOffsetBefore: 0, 
+            //     slidesOffsetAfter: 0,
+            // },
             1024: {
                 slidesPerView: 'auto',
                 centeredSlides: false, 
@@ -268,36 +316,31 @@ window.addEventListener("scroll", () => {
 
 
 
-const video = document.getElementById('main-video');
+//const video = document.getElementById('main-video');
 
 // 재생 속도를 설정합니다 (기본값은 1.0)
 //video.playbackRate = 0.8;
 
 
-
-
 new Splide('.splide', {
-  type: 'loop', 
-  snap: true, // 드래그했을 때 자석처럼 딱딱 끊겨서 빈 공간 없이 안착하게 만듭니다.
+  type: 'loop',
   autoWidth: true,
-  gap    : 0,  // '10px' 카드 사이 여백
-  // 나머지 기존에 쓰시던 옵션들 (예시)
-  //perPage: 3,      // 한 화면에 보일 카드 개수
+  gap: '20px',
+  // 드래그 후 튕기는 액션(휘리릭)을 잡는 핵심 옵션들
+  drag: true,           // 드래그는 가능하게 하되
+  flickPower: 0,        // ★ 세게 밀었을 때 휘리릭 날아가는 힘을 0으로 차단
+  snap: true,           // ★ 드래그를 놓았을 때 가장 가까운 슬라이드에 딱 붙게 설정
   
-  //arrows : true,
-  //pagination: false,
-  
-  // 브레이크포인트 설정이 있다면 그대로 유지
-//   breakpoints: {
-//     992: {
-//       perPage: 2,
-//     },
-//     576: {
-//       perPage: 1,
-//     }
-//   }
-    clones: 4,
-}).mount();
+  autoScroll: {
+    speed: 0.1,           
+    pauseOnHover: false,
+    pauseOnFocus: false,
+  },
+}).mount( window.splide.Extensions );
+
+
+
+
 
 
 

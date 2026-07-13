@@ -1,7 +1,63 @@
 @font-face {
     font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
     font-display: swap;
 }
 html {
@@ -58,6 +114,7 @@ ul, li, p {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 h2 {
@@ -95,23 +152,27 @@ h5, h6 {
 }
 
 input {
-    font-size: 1.8rem !important;
-    font-weight: bold;
+    /* line-height: 1 !important; */
+    /* font-size: 1.6rem !important; */
+    font-weight: 600;
 }
 
 input::placeholder {
-    color: var(--black);
+    font-weight: normal;
+    font-size: 1.4rem !important;
+    color: var(--gray500) !important;
     opacity: 1;
-    /* 파이어폭스에서 투명도 기본값 때문에 흐려지는 현상 방지 */
+    line-height: 1.6;
 }
 
 input:-ms-input-placeholder {
-    color: var(--black) !important;
+    color: var(--gray500) !important;
 }
 
 input::-ms-input-placeholder {
-    color: var(--black);
+    color: var(--gray500);
 }
+
 
 input:focus {
     background-color: transparent !important;
@@ -120,11 +181,29 @@ input:focus {
     border: 0;
     backdrop-filter: 0;
 }
-.br {
-    display: block;
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+/* 기본 X 버튼의 크기나 마진 조절 */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  background-image: url('./images/ico-close.svg');
+  background-size: contain;
+  cursor: pointer;
+  border-radius: 5rem;
 }
 .form-control {
     border: 0;
+    line-height: 1 !important;
+    padding: 0.6rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .form-control:focus {
@@ -139,10 +218,13 @@ input:focus {
     font-size: 2rem;
 }
 
-
+.br {
+    display: block;
+}
 
 button {
     border: 0;
+    background: transparent;
 }
 
 .btn-basic {
@@ -165,7 +247,7 @@ img {
     flex-shrink: 0;
     object-fit: cover;
     object-position: center;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     overflow: hidden;
     margin-bottom: 0 !important;
 }
@@ -190,8 +272,8 @@ img {
 .scroll-wrapper {
     display: flex;
     flex-wrap: nowrap;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
     overflow-x: auto;
     gap: 0.8rem;
 }
@@ -207,8 +289,8 @@ img {
     width: auto !important;
     padding: 0.8rem 1.6rem;
     border-radius: 10rem;
-    border: 1px solid #DAD6D6;
-    background: transparent;
+    /* border: 1px solid #DAD6D6; */
+    background: var(--gray50);
     color: var(--gray500);
     font-size: 1.4rem;
     font-weight: bold;
@@ -262,7 +344,7 @@ img {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    height: 2rem !important;
+    height: 2.2rem !important;
 }
 
 .route {
@@ -336,12 +418,12 @@ del {
 }
 
 .i-user {
-    background: url(./images/ico-user.svg) no-repeat center;
+    background: url(./images/ico-user-000.svg) no-repeat center;
     background-size: contain;
 }
 
 .i-menu {
-    background: url(./images/ico-menu.svg) no-repeat center;
+    background: url(./images/ico-menu-000.svg) no-repeat center;
     background-size: contain;
 }
 
@@ -362,6 +444,14 @@ del {
 
 .i-up {
     background: url(./images/ico-up.svg) no-repeat center;
+    background-size: contain;
+}
+.i-event {
+    background: url(./images/i-gift.svg) no-repeat center;
+    background-size: contain;
+}
+.i-cs {
+    background: url(./images/i-cs.svg) no-repeat center;
     background-size: contain;
 }
 
@@ -416,8 +506,8 @@ del {
     width: 4rem;
     height: 4rem;
     background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(0, 0, 0, 0.50);
     border-radius: 4px;
     display: flex;
@@ -455,6 +545,9 @@ del {
     }
     h2 .br {
         display: none;
+    }
+    input::placeholder {
+        font-size: 1.5rem !important;
     }
 }
 
