@@ -842,12 +842,16 @@ header .area02 nav::-webkit-scrollbar {
 }
 
 .bestItemSwiper .item {
-    width: 18rem !important;
+    width: 16.7rem !important;
     flex-shrink: 0 !important;
 }
 
 .bestItemSwiper .item .thumb {
     position: relative;
+}
+.bestItemSwiper .item .thumb img {
+    width: 100%;
+    height: auto;
 }
 
 .bestItemSwiper .item .ranking {
@@ -914,7 +918,11 @@ header .area02 nav::-webkit-scrollbar {
     }
 }
 
-
+@media (min-width:768px) {
+    .bestItemSwiper .item {
+        width: 18rem !important;
+    }
+}
 
 /*===============================================================
 3. 이벤트 배너
@@ -966,7 +974,7 @@ header .area02 nav::-webkit-scrollbar {
 }
 
 .timeSaleSwiper .item {
-    width: 18rem !important;
+    width: 16.7rem !important;
     flex-shrink: 0 !important;
 }
 
@@ -1045,6 +1053,11 @@ header .area02 nav::-webkit-scrollbar {
         margin-left: 0;
         margin-right: 0;
 
+    }
+}
+@media (min-width:768px) {
+    .timeSaleSwiper .item {
+        width: 18rem !important;
     }
 }
 
@@ -1159,8 +1172,8 @@ header .area02 nav::-webkit-scrollbar {
 
 @media (min-width: 768px) {
     .splide {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: -2rem;
+        margin-right: -2rem;
     }
 }
 
