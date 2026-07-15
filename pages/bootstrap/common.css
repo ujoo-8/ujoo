@@ -161,11 +161,10 @@ input {
 
 input::placeholder {
     font-weight: normal;
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
     color: var(--gray500) !important;
     opacity: 1;
     line-height: 1.6;
-    display: none;
 }
 
 input:-ms-input-placeholder {
@@ -207,19 +206,22 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 0.6rem 0;
     font-size: 1.6rem;
     font-weight: 600;
-    border-radius: 9rem;
+    width: 100%;
 }
-
+.form-control::placeholder {
+    color: transparent !important;
+    opacity: 0 !important;
+}
+.form-control::-webkit-input-placeholder {
+    color: transparent !important;
+}
+.form-control:-ms-input-placeholder {
+    color: transparent !important;
+}
 .form-control:focus {
     background-color: transparent;
-    /* 인풋창 클릭 시 생기는 파란색 테두리와 그림자 완전 제거 */
     box-shadow: none;
     color: var(--black);
-}
-
-.search-bar-box input::placeholder {
-    color: rgba(255, 255, 255, 0.75) !important;
-    font-size: 2rem;
 }
 
 .br {
@@ -533,6 +535,17 @@ del {
 }
 
 @media (min-width: 574px) {
+    .form-control::placeholder {
+        color: var(--gray500) !important;
+        opacity: 0 !important;
+    }
+    .form-control::-webkit-input-placeholder {
+        color: var(--gray500) !important;
+    }
+    .form-control:-ms-input-placeholder {
+        color: var(--gray500) !important;
+    }
+
     .scroll-container {
         position: static !important;
         margin-inline: 0 !important;
