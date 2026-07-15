@@ -55,7 +55,7 @@
 
 .main-header .area01 .logo-area {
     gap: 1.6rem;
-    border: 1px solid;
+    padding-right: 1rem;
 }
 
 .main-header .area01 .logo-area h1 {
@@ -70,6 +70,7 @@
 
 .main-header .area01 .searchBox {
     width: 80%;
+    max-width: 40.6rem;
     border: 1px solid rgba(0, 0, 0, 0.6);
     border-radius: 99rem;
     padding: 0.2rem 1.2rem 0.2rem 1.6rem;
@@ -164,9 +165,9 @@ header .area02 nav::-webkit-scrollbar {
         height: 3.2rem;
     }
 
-    .main-header .area01 .searchBox {
+    /* .main-header .area01 .searchBox {
         width: 50%;
-    }
+    } */
 
     .main-header .area02 a {
         padding-right: 1.6rem;
@@ -197,8 +198,7 @@ header .area02 nav::-webkit-scrollbar {
     }
 
     .main-header .area01 .searchBox {
-        width: 60%;
-        padding: 0.5rem 1.6rem;
+        padding: 0.5rem 1rem 0.5rem 1.6rem;
     }
 
     .main-header .area01 .pc-mn {
@@ -228,10 +228,6 @@ header .area02 nav::-webkit-scrollbar {
 @media (min-width: 1440px) {
     .main-header .area01 .logo-area {
         gap: 3rem;
-    }
-
-    .main-header .area01 .searchBox {
-        width: 40.6rem;
     }
 
     .main-header .area01 .i-menu {
