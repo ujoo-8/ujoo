@@ -41,13 +41,15 @@
 
 .main-header {
     width: 100%;
-    margin: 1.6rem auto 2.6rem;
     gap: 2rem;
+    margin: 1.6rem auto 2.6rem; 
 }
 
 .main-header .row {
-    width: 92%;
+    width: 100%;
+    max-width: 120rem;
     margin: 0 auto;
+    padding: 0 1.6rem;
 }
 
 .main-header .area01 .logo-area {
@@ -65,7 +67,7 @@
 }
 
 .main-header .area01 .searchBox {
-    width: 73%;
+    width: 72%;
     border: 1px solid rgba(0, 0, 0, 0.6);
     border-radius: 99rem;
     padding: 0.2rem 1.2rem 0.2rem 1.6rem;
@@ -96,7 +98,6 @@
     display: flex;
     flex-direction: row;
 }
-
 header .area02 nav::-webkit-scrollbar {
     display: none;
 }
@@ -108,7 +109,9 @@ header .area02 nav::-webkit-scrollbar {
     padding-right: 1rem;
     padding-left: 1rem;
 }
-
+.main-header .area02 a:first-child {
+    padding-left: 0;
+}
 .main-header.scrolled {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
@@ -119,13 +122,10 @@ header .area02 nav::-webkit-scrollbar {
 }
 
 .main-header.scrolled .row {
-    width: 92%;
-    padding: 1rem 0;
+    width: 100%;
+    padding: 1rem 1.6rem;
 }
 
-/* .main-header.scrolled .area01 .logo-area {
-    width: 100%;
-} */
 
 .main-header.scrolled .logo svg {
     filter: invert(0%) sepia(11%) saturate(32%) hue-rotate(314deg) brightness(100%) contrast(86%);
@@ -165,15 +165,6 @@ header .area02 nav::-webkit-scrollbar {
 
 
 @media (min-width:768px) {
-    .main-header {
-        width: 94%;
-        margin: 1.6rem auto 2.6rem;
-        gap: 3rem;
-    }
-
-    .main-header .row {
-        width: 100%;
-    }
 
     .main-header .area01 .logo-area h1 {
         width: 7.6rem;
@@ -185,12 +176,10 @@ header .area02 nav::-webkit-scrollbar {
     }
 
     .main-header .area02 a {
-        font-size: 1.6rem;
-        position: relative;
         padding-right: 1.6rem;
         padding-left: 1.6rem;
     }
-
+    
     .main-header .area02 a::after {
         position: absolute;
         right: 0;
@@ -204,15 +193,6 @@ header .area02 nav::-webkit-scrollbar {
 
     .main-header .area02 a:last-child::after {
         display: none;
-    }
-
-    .main-header .area02 a:first-child {
-        padding-left: 2.4rem;
-    }
-
-    .main-header.scrolled .row {
-        width: 94%;
-        padding: 1.6rem 0;
     }
 }
 
@@ -252,21 +232,7 @@ header .area02 nav::-webkit-scrollbar {
     }
 
 }
-
-@media (min-width: 1200px) {
-
-    .main-header .row {
-        width: 119rem;
-        margin: 0 auto;
-    }
-}
-
 @media (min-width: 1440px) {
-    .main-header {
-        width: 100%;
-        margin: 1.6rem auto 2.6rem;
-        gap: 3rem;
-    }
     .main-header .area01 .logo-area {
         gap: 3rem;
     }
@@ -281,36 +247,9 @@ header .area02 nav::-webkit-scrollbar {
 
     .main-header .area02 a {
         font-size: 1.7rem;
-        font-weight: 600;
-        position: relative;
         padding-right: 3rem;
         padding-left: 3rem;
     }
-
-    .main-header .area02 a::after {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 1px;
-        height: 18px;
-        background: rgba(0, 0, 0, 0.12);
-        content: '';
-    }
-
-    .main-header .area02 a:last-child::after {
-        display: none;
-    }
-
-    .main-header .area02 a:first-child {
-        padding-left: 0;
-    }
-
-    .main-header.scrolled .row {
-        width: 120rem;
-        padding: 1.6rem 0;
-    }
-
 }
 
 
@@ -425,9 +364,6 @@ header .area02 nav::-webkit-scrollbar {
 }
 
 @media (min-width:768px) {
-    .mainBnSwiper {
-        margin-top: 13rem;
-    }
 
     .mainBnSwiper .swiper-slide {
         max-width: 120rem;
@@ -462,6 +398,9 @@ header .area02 nav::-webkit-scrollbar {
 }
 
 @media (min-width:1024px) {
+    .mainBnSwiper {
+        margin-top: 13rem;
+    }
     .mainBnSwiper .swiper-controller {
         left: 6.1%
             /*5.5rem*/
@@ -800,23 +739,8 @@ header .area02 nav::-webkit-scrollbar {
         height: 25.6rem;
         margin-top: 0;
     }
-
-    .airbnSwiper a {
+    .airbnSwiper img {
         display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .airbnSwiper a picture {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .airbnSwiper a picture img {
-        display: block;
-        width: 100%;
-        height: 100%;
         border-radius: 2rem;
     }
 
@@ -1055,7 +979,6 @@ header .area02 nav::-webkit-scrollbar {
     .timeSaleSwiper {
         margin-left: 0;
         margin-right: 0;
-
     }
 }
 @media (min-width:768px) {
@@ -1361,16 +1284,9 @@ header .area02 nav::-webkit-scrollbar {
         padding: 0;
         margin-bottom: 3rem !important;
     }
-
-    
-
 }
 
 @media (min-width: 1200px) {
-    .shorts .tag {
-        padding: 0;
-    }
-
     .shorts .tag a {
         font-size: 1.7rem;
     }
@@ -1615,28 +1531,23 @@ footer .area02 span {
     footer .area02 p span:first-child:after {
         display: none;
     }
-
-    /* @media (min-width: 1024px) {
-        footer .area02 {
-            margin: 0 !important;
-        }
-    } */
+}
 
 
-    @media (min-width: 1200px) {
-        footer .sns-youtube {
-            width: 2.4rem;
-            height: 3rem;
-        }
 
-        footer .sns-instagram {
-            width: 2.2rem;
-            height: 2.2rem;
-        }
+@media (min-width: 1200px) {
+    footer .sns-youtube {
+        width: 2.4rem;
+        height: 3rem;
+    }
 
-        footer .sns-blog {
-            width: 2.4rem;
-            height: 2.4rem;
-        }
+    footer .sns-instagram {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    footer .sns-blog {
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }

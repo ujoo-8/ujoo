@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1-2. 항공 배너 Swiper
     const airbnSwiper = new Swiper(".airbnSwiper", {
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 10,
         slidesOffsetBefore: 16, 
         slidesOffsetAfter: 16, 
         loop: true, 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             1200: {
                 slidesPerView: 1,
-                spaceBetween: 0, 
+                spaceBetween: 10, 
                 slidesOffsetBefore: 0, 
                 slidesOffsetAfter: 0,
             },
@@ -259,35 +259,17 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
-
-    // 8. review
-    // if (document.querySelector('.review-ticker-swiper')) {
-    //     new Swiper('.review-ticker-swiper', {
-    //         loop: true,
-    //         slidesPerView: 'auto',
-    //         spaceBetween: 20,
-    //         speed: 1000, // 이 숫자가 클수록 천천히 흐릅니다
-    //         allowTouchMove: true, // 드래그 가능
-    //         freeMode: {
-    //             enabled: true,
-    //             sticky: false, // 자석처럼 붙지 않고 드래그한 자리에 부드럽게 멈춤
-    //             momentum: true, // 던졌을 때 스르륵 미끄러지는 효과
-    //         },
-    //         autoplay: {
-    //             delay: 0, // 대기시간 없이 무한 작동
-    //             disableOnInteraction: false,
-    //         },
-    //     });
-    // }
-
 }); 
 
 
+
+
+
+// review
 document.addEventListener('DOMContentLoaded', function() {
     
     const tickerEl = document.querySelector('#review-ticker');
     
-    // 요소가 실제 존재하고, Splide와 AutoScroll 라이브러리가 로드되었을 때만 안전하게 실행
     if (tickerEl && typeof Splide !== 'undefined' && typeof splinter !== 'undefined' || window.splide?.Extensions?.AutoScroll) {
         
         const reviewTicker = new Splide('#review-ticker', {
@@ -317,17 +299,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// 헤더 및 검색 영역 스크롤 효과 (안전 장치 추가)
+
+
+
+// header
 const header = document.querySelector('.main-header');
-const visual = document.querySelector('.search-area');
+//const visual = document.querySelector('.search-area');
 
 window.addEventListener('scroll', function() {
   if (window.scrollY > 50) {
     header.classList.add('scrolled');
-    visual.classList.add('hidden'); 
+//   visual.classList.add('hidden'); 
   } else {
     header.classList.remove('scrolled');
-    visual.classList.remove('hidden');
+//    visual.classList.remove('hidden');
   }
 });
 
@@ -336,32 +321,10 @@ window.addEventListener('scroll', function() {
 
 
 
-// 제이쿼리 검색창 토글
-$(document).ready(function() {
-    $('.search-open-btn').on('click', function() {
-        $('.top-search-area').addClass('active');
-        setTimeout(function() {
-            $('.search-input').focus();
-        }, 300);
-    });
-
-    $('.search-close-btn').on('click', function() {
-        $('.top-search-area').removeClass('active');
-    });
-  
-    $('.top-search-area').on('click', function(e) {
-        if ($(e.target).is('.top-search-area')) {
-            $(this).removeClass('active');
-        }
-    });
-});
 
 
 
-
-
-
-// 탑버튼 활성화 (에러 안전 장치 추가)
+// 위로가기 버튼
 const topBtn = document.getElementById("scrollTopBtn");
 if (topBtn) {
     window.addEventListener("scroll", () => {
@@ -374,5 +337,43 @@ if (topBtn) {
             topBtn.classList.remove("show-btn");
             topBtn.classList.add("hidden-btn");
         }
+    });
+
+    // 2. 버튼 클릭 시 맨 위로 부드럽게 이동 
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+// 전체메뉴, 검색창
+const menus = document.querySelectorAll('#searchSidebar, #responsiveMenu');
+const mainHeader = document.querySelector('.main-header');
+
+if (menus.length > 0 && mainHeader) {
+    // 2. forEach를 사용해 가져온 모든 메뉴에 각각 이벤트를 걸어줍니다.
+    menus.forEach(menu => {
+        // 우측 창이 열릴 때
+        menu.addEventListener('show.bs.offcanvas', () => {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            mainHeader.style.paddingRight = `${scrollbarWidth}px`;
+        });
+
+        // 우측 창이 닫힐 때
+        menu.addEventListener('hidden.bs.offcanvas', () => {
+            mainHeader.style.paddingRight = '0px';
+        });
     });
 }
